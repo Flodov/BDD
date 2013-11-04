@@ -1,7 +1,7 @@
 //fonction
 <?php
 
-function affichage_début_page() {
+function affichage_debut_page() {
   print("<!DOCTYPE html>
   <html lang="fr" >
   <head>
