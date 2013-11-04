@@ -1,0 +1,25 @@
+Liste des traitements :
+
+
+Etapes initiales :
+------------------
+1 Créer et vérifier le MR
+
+2 Installer la BDD:
+
+  Une base de référence sur le PC de Flodov ( référence, elle sera la base que l'on rendra donc propre et sans erreur)
+  Une base de test sur chaque pc du binome MR
+  Une base copie sur tous les autres pcs des binomes 
+
+
+
+Etapes de développement :
+-------------------------
+
+3 Formulaire d'insertion : 
+
+	3.1 Ajout d'une personne
+	
+	3.2 Ajout d'un emplacement 
+	
+	3.3 Ajout d'un 
