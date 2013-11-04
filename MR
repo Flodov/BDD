@@ -1,4 +1,6 @@
-ACTIVITE (id_activite, nom_activite, #id_lieu)  LIEU (id_lieu, nom_lieu)  
+ACTIVITE (id_activite, nom_activite, #id_lieu) 
+
+LIEU (id_lieu, nom_lieu)  
 
 TEL (id_telephone, #id_personne)  
 
