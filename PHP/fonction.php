@@ -12,8 +12,8 @@ function affichage_début_page() {
 }
 
 function affichage_fin_page() {
-  </body>
-  </html>
+  print("</body>
+  </html>");
   }
 
 ?>
