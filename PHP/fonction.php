@@ -21,4 +21,13 @@ function validateMail($email)
 {
 	return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
+//fonction pour vérifier la conformité d'un numéro de tel Français
+function VerifTelFr($chaine)
+{
+       $regex = "#^0[1-68]([-. ]?[0-9]{2}){4}$#";
+	  if (preg_match($regex,$chaine))
+	     return true;
+	  else
+	     return false;
+}
 ?>
