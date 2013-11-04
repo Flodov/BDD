@@ -1,0 +1,23 @@
+ACTIVITE (id_activite, nom_activite, #id_lieu)  LIEU (id_lieu, nom_lieu)  
+
+TEL (id_telephone, #id_personne)  
+
+DATE (id_date)  
+
+EMPLACEMENT (id_emplacement, prix_emplacement, #id_type_emplacement)  
+
+TYPE_EMPLACEMENT (id_type_emplacement, libelle_emplacement) 
+ 
+MOYEN_PAYEMENT (id_paiement, libelle_paiement)
+ 
+PERSONNE (id_personne, nom_personne, adresseEmail, prenom,#accompagnateur) 
+
+RESERVATION (id_reservation, nombre_jour, #id_personne, #id_date, #id_date_fin, #id_emplacement)  
+
+FACTURE(id_facture, description_facture, #id_date, #id_reservation)  
+
+ANIME (id_personne, id_activite, id_date) 
+
+PARTICIPE (id_personne, id_activite, id_date) 
+
+PAYEE (id_facture, id_paiement, montant) 
