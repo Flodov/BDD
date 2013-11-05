@@ -79,4 +79,28 @@ Idem pour chaque table ajout/modifiable/supp
 
 /!\ Aux gogoles qui vont me faire la table DATE, je leur fous une tatane.
 
+Les tables dites dépendantes (lieu, tél, ... ) ne s'afficheront que lorsque l'user clique sur la table dite "mère" (personne, ...)
+	uniquement là on propose d'ajouter/modif/suppr ces tables.
+
+INFORMATION COMPLEMENTAIRES MAIS ELEMENTAIRES :
+
+Les choix seront proposés par des listes déroulantes et/ou des cases précochées ( no panic je sais le faire)
+
+Pour les formulaires d'ajout suivants : 
+
+	- personne : il est bien évident que sur le champs accompagnateur on a 2 choix => rien ou le nom/id de quelqu'un.
+	Pareil pour les nums de téléphone : on ne choisit pas dans la table existante, on lui demande d'inserer un num,
+	et s'il en a plusieurs il clic sur le bouton "Ajouter un numéro de téléphone".
+	
+	- Emplacement : rien de particulier à dire.
+	
+	- Reservation : on propose différents mode de paiement par des cases à cocher avec le montant.
+		1 CASE COCHEE = 1 INSTANCE DE FACTURE.
+		le montant des factures sera égale au montant de la reservation.
+	
+		/!\ ERREUR DANS LE MR ( et dans le MCD ) : une facture poosède un mode mais son montant est une propriété de facture.
+		On peut ajouter une date dans PAYEE ( mais inutile car on a dit que la facture se paie au moment de l'émission)
+	
+		--> A revoir
+	
 
