@@ -42,4 +42,25 @@ function is_valide_date($date, $sep='/')
 		return false;
 	return checkdate($month, $day, $year);
 }
+
+function verif_alpha($str) // On vériefie si une chaine ne contient que des caracteres de l'alphabet
+{
+    preg_match("/([^A-Za-z])/",$str,$result);
+//On cherche tt les caractères autre que [A-z] 
+    if(!empty($result)){//si on trouve des caractère autre que A-z
+        return false;
+    }
+    return true;
+}
+
+function verif_alphaNum($str) // On vérifie si une chaine contient uniquement les lettres de l'alphabet et des nombres
+{
+    preg_match("/([^A-Za-z0-9])/",$str,$result);
+//On cherche tt les caractères autre que [A-Za-z] ou [0-9]
+    if(!empty($result)){//si on trouve des caractère autre que A-Za-z ou 0-9
+        return false;
+    }
+    return true;
+}
+
 ?>
