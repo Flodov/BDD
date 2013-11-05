@@ -20,6 +20,63 @@ Etapes de développement :
 
 	3.1 Ajout d'une personne
 	
+		3.1.1 Ajout d'un numéro de téléphone
+		3.1.2 Ajout d'un accompagnateur
+	
 	3.2 Ajout d'un emplacement 
 	
-	3.3 Ajout d'un 
+		3.2.1 Ajout d'un type
+	
+	3.3 Ajout d'une activité 
+	
+		3.3.1 Ajout d'un lieu
+		
+		
+	3.4 Ajout d'une participation (table participe)
+	
+	
+	3.5 Ajout d'une animation (table anime)
+
+	3.6 Ajout de reservation
+	
+		3.6.1 implicite => ajout de facture 
+			En effet on demandera les différents modes de paiements
+			et en fonction de cela on établira une facture par mode
+			
+	/!\ La table mode_paiement sera déjà écrite en dur et aucun ajout/modif/suppr ne sera possible
+	
+	
+4 Formulaire de modification :
+
+	4.1 Modif de personne
+	
+		4.1.1 Modif du num
+		4.1.2 modif de l'accompagnateur
+		
+	4.2 Modif de emplacement
+	
+	4.3 Anime
+	
+	4.4 Participe
+	
+5 Formulaire de suppression : 
+
+	5.1 RESERVATION (annulation) => facture
+	
+	
+----------------------------
+
+6 Design
+
+Menu : 
+
+Il faut un menu horizontal situé au dessus de toutes les pages. Celui comportera un onglet par "table" :
+Personne <=> Client qui affichera tous les clients enregistrés avec situé avant l'affichage(tableau) un onglet " Nouveau"
+
+Avant chaque ligne,  deux cases : Modif et Suppression. Celles-ci renverront sur les formulaires adpatés
+
+Idem pour chaque table ajout/modifiable/supp
+
+/!\ Aux gogoles qui vont me faire la table DATE, je leur fous une tatane.
+
+
