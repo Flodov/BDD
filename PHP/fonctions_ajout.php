@@ -1,8 +1,8 @@
 // Fonction pour ajouter
 
-$user="root";
-$mpd="web";
-$bdd="projet_bdd_iut";
+$user="root";  // nom d'utilisateur'
+$mpd="web";    // Mot de passe utilisateur
+$bdd="projet_bdd_iut";  // nom de votre base de donnay
 
 function ajouter_personne($nom, $prenom, $email, $accompagnateur )
 {
@@ -73,3 +73,14 @@ function ajouter_RESERVATION($montant_total, $date_debut, $date_fin, $id_personn
     	print("Message d'erreur :".mysqli_error($link)); 
   	mysqli_close($link);
 }
+
+function ajouter_FACTURATION($description_facture, $montant_facture, $date_facture, $id_reservation)
+{
+	$link = mysqli_connect("localhost",'$user','$web', "$bdd";
+	if($link==NULL)die("pb connexion");
+	$requete="INSERT INTO FACTURATION (description_facture, montant_facture, date_facture, id_reservation) values ($description_facture, '$montant_facture', '$date_facture', $id_reservation );";
+  	if (!mysqli_query($link, $requete)) 
+    	print("Message d'erreur :".mysqli_error($link)); 
+  	mysqli_close($link);
+}
+
