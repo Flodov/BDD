@@ -88,7 +88,7 @@ create table PAYEE(
 	FOREIGN KEY(id_mode_paiement) REFERENCES MODE_PAIEMENT(id_mode_paiement),
 	PRIMARY KEY(id_facture,id_mode_paiement))Engine=InnoDB;
 
-dropp table if exists TEL;
+drop table if exists TEL;
 create table TEL(
 	numTelephone int not null,
 	id_personne int not null,
