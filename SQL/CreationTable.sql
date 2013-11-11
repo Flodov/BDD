@@ -93,5 +93,5 @@ create table TEL(
 	numTelephone int not null,
 	id_personne int not null,
 	primary key (numTelephone),
-	foreign key id_personne references PERSONNE(id_personne))Engine=InnoDB;
+	foreign key (id_personne) references PERSONNE(id_personne))Engine=InnoDB;
 	
