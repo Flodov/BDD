@@ -18,28 +18,28 @@ Etapes de développement :
 
 3 Formulaire d'insertion : 
 
-	3.1 Ajout d'une personne (OK)
+	3.1 Ajout d'une personne (fait à vérifier)
 	
-		3.1.1 Ajout d'un numéro de téléphone (OK)
-		3.1.2 Ajout d'un accompagnateur (OK)
+		3.1.1 Ajout d'un numéro de téléphone (fait à vérifier)
+		3.1.2 Ajout d'un accompagnateur (fait à vérifier)
 	
-	3.2 Ajout d'un emplacement (OK)
+	3.2 Ajout d'un emplacement (fait à vérifier)
 	
-		3.2.1 Ajout d'un type (OK)
+		3.2.1 Ajout d'un type (fait à vérifier)
 	
-	3.3 Ajout d'une activité  (OK)
+	3.3 Ajout d'une activité  (fait à vérifier)
 	
-		3.3.1 Ajout d'un lieu (OK)
+		3.3.1 Ajout d'un lieu (fait à vérifier)
 		
 		
-	3.4 Ajout d'une participation (table participe) (OK)
+	3.4 Ajout d'une participation (table participe) (fait à vérifier)
 	
 	
-	3.5 Ajout d'une animation (table anime) (OK)
+	3.5 Ajout d'une animation (table anime) (fait à vérifier)
 
-	3.6 Ajout de reservation (OK)
+	3.6 Ajout de reservation (fait à vérifier)
 	
-		3.6.1 implicite => ajout de facture 
+		3.6.1 implicite => ajout de facture (fait à vérifier)
 			En effet on demandera les différents modes de paiements
 			et en fonction de cela on établira une facture par mode
 			
