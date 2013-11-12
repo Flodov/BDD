@@ -19,9 +19,9 @@ function affichage_activite() {
          <tr><th>Nom Activité</th><th>Lieu</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td></tr>
-    <td style=\"text-align : center;\"><a href=\"modif.php?modif=".$ligne[0]."\">
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
-    <a href=\"ajout.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
+    <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
     style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
   }
   print("</table>");
