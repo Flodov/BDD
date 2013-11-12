@@ -52,10 +52,10 @@ function update_ANIME($id_personne, $id_activite, $new_id_activite, $new_date_an
     mysqli_close($link);
 }
 
-function update_PARTICIPE($id_personne, $id_activite, $new_id_activite, $date_participe, $new_date_participe)
+function update_PARTICIPE($id_personne, $id_activite, $new_id_activite, $new_date_participe)
     $link = mysqli_connect("localhost",'$user','$web', "$bdd");
     if($link==NULL)die("pb connexion");
-    $requete="update PARTCIPE SET id_activite=$new_id_activite, date_partc=$new_date_anime where id_personne=$id_personne and id_activite=$id_activite ;";
+    $requete="update PARTCIPE SET id_activite=$new_id_activite, date_participe=$new_date_participe where id_personne=$id_personne and id_activite=$id_activite ;";
     echo $requete; 
     if (!mysqli_query($link, $requete)) 
     { 
