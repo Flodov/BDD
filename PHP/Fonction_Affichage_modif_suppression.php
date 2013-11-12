@@ -14,10 +14,15 @@ function affichage_activite() {
   $req = "SELECT a.id_activite, a.nom_activite, l.nom_lieu FROM Activite a, Lieu l WHERE a.id_lieu = l.id_lieu";
   $result = $connexion -> $req;
   print("<table>
-         <tr><th rowspan=\"2\">Activité</th></tr>
+         <tr><th rowspan=\"3\">Activité</th><th>Actions</th></tr>
          <tr><th>Nom Activité</th><th>Lieu</th></tr>");
   while($ligne = $result -> Fetch_array()) {
-    print("<tr><td>".$ligne[1]."/<td><td>".$ligne[2]."</td></tr>"); 
+    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td></tr>
+    
+    <td style=\"text-align : center;\"><a href=\"modif.php?modif=".$ligne[0]."\">
+    <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
+		<a href=\"ajout.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
+		style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
   }
   print("</table>");
 }
