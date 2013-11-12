@@ -1,8 +1,8 @@
 // Fonction pour modifier
 
-$user="root";  // nom d'utilisateur
-$mpd="web";    // Mot de passe utilisateur
-$bdd="projet_bdd_iut";  // nom de votre base de donnay
+define('user','root' );
+define('web', 'web' );
+define('bdd','projet_bdd_iut' );
 
 function update_TEL($numTelephone, $new_numTelephone)
     $link = mysqli_connect("localhost",'$user','$web', "$bdd");
