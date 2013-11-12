@@ -63,26 +63,4 @@ function verif_alphaNum($str) // On vérifie si une chaine contient uniquement l
     return true;
 }
 
-//verification qu'un nombre est un numérique
-function verif_numeric($nombre)
-{
-	if(is_numeric($nombre)) {
-		return true;
-	}
-	else { 
-		return false 
-	}
-}
 
-//verification qu'un nombre est un entier
-function verif_int($nombre)
-{
-	if(is_integer($nombre)) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-?>
