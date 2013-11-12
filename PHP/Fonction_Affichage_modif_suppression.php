@@ -5,6 +5,7 @@ $user = root;
 $mdp = web;
 $bdd = projet_bdd_iut;
 
+
 function affichage_activite() {
   $connexion = mysqli_connect($host,$user,$mdp,$bdd);
   if($link==NULL) {
