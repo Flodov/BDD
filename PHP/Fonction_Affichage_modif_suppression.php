@@ -15,8 +15,8 @@ function affichage_Activite() {
   $req = "SELECT a.id_activite, a.nom_activite, l.nom_lieu FROM Activite a, Lieu l WHERE a.id_lieu = l.id_lieu";
   $result = $connexion -> $req;
   print("<table>
-         <tr><th colspan=\"3\">Activité</th><th>Actions</th></tr>
-         <tr><th>Nom Activité</th><th>Lieu</th></tr>");
+         <tr><th colspan=\"3\">Activité</th></tr>
+         <tr><th>Nom Activité</th><th>Lieu</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td></tr>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
@@ -37,7 +37,7 @@ function affichage_Lieu() {
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"2\">Lieu</th></tr>
-         <tr><th>Nom Lieu</th><th>Lieu</th><th>Actions</th></tr>");
+         <tr><th>Nom Lieu</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td></tr>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
@@ -57,7 +57,7 @@ function affichage_Tel() {
   $req = "SELECT t.numTelephone p.nom_personne FROM Tel t, Personne p WHERE t.id_personne = p.id_personne";
   $result = $connexion -> $req;
   print("<table>
-         <tr><th colspan=\"2\">Telephone</th></tr>
+         <tr><th colspan=\"3\">Telephone</th></tr>
          <tr><th>Numero de telephone</th><th>Nom de la personne</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td>".$ligne[0]."/<td><td>".$ligne[1]."/<td></tr>
@@ -79,10 +79,10 @@ function affichage_Emplacement() {
   Type_Emplacement te WHERE e.id_type_emplacement = te.id_type_emplacement";
   $result = $connexion -> $req;
   print("<table>
-         <tr><th colspan=\"3\">Emplacement</th></tr>
-         <tr><th>Prix emplacement</th><th>Libelle type emplacement</th><th>Actions</th></tr>");
+         <tr><th colspan=\"4\">Emplacement</th></tr>
+         <tr><th>Id emplacement</th><th>Prix emplacement</th><th>Libelle type emplacement</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
-    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."/<td></tr>
+    print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."/<td></tr>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
@@ -100,10 +100,54 @@ function affichage_Type_Emplacement() {
   $req = "SELECT * FROM Type_Emplacement";
   $result = $connexion -> $req;
   print("<table>
-         <tr><th colspan=\"1\">Type Emplacement</th></tr>
+         <tr><th colspan=\"2\">Type Emplacement</th></tr>
          <tr><th>Libelle type emplacement</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td></tr>
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
+    <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
+    <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
+    style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
+  }
+  print("</table>");
+}
+
+function affichage_Mode_Paiement() {
+  $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+  if($connexion==NULL) {
+    die("pb connexion");
+    return;
+  }
+  $req = "SELECT * FROM Mode_Paiement";
+  $result = $connexion -> $req;
+  print("<table>
+         <tr><th colspan=\"2\">Mode Paiement</th></tr>
+         <tr><th>Libelle Mode Paiement</th><th>Actions</th></tr>");
+  while($ligne = $result -> Fetch_array()) {
+    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td></tr>
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
+    <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
+    <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
+    style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
+  }
+  print("</table>");
+}
+
+function affichage_Personne() {
+  $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+  if($connexion==NULL) {
+    die("pb connexion");
+    return;
+  }
+  $req = "SELECT p.id_personne, p.nom_personne, p.adresseEmail, a.nom_personne FROM Personne p, 
+  Personne a WHERE p.id_accompagnateur = a.id_personne";
+  $result = $connexion -> $req;
+  print("<table>
+         <tr><th colspan=\"4\">Personne</th></tr>
+         <tr><th>Nom</th><th>Adresse Email</th><th>Nom accompagnateur</th><th>Actions</th></tr>");
+  while($ligne = $result -> Fetch_array()) {
+    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."/<td>
+    <td>".$ligne[3]."/<td></tr>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
