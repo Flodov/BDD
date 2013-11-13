@@ -1,8 +1,8 @@
 // Fonction pour modifier
 
-define('user','root' );
-define('web', 'web' );
-define('bdd','projet_bdd_iut' );
+define('user','root', true );
+define('web', 'web', true );
+define('bdd','projet_bdd_iut', true );
 
 function update_TEL($numTelephone, $new_numTelephone)
     $link = mysqli_connect("localhost",'$user','$web', "$bdd");
