@@ -158,7 +158,7 @@ function affichage_Personne() {
 }
 */
 
-function affichage_reservation() {
+function affichage_Reservation() {
   $connexion = mysqli_connect($host,$user,$mdp,$bdd);
   if($connexion==NULL) {
     die("pb connexion");
@@ -183,7 +183,7 @@ function affichage_reservation() {
   print("</table>");
 }
 
-function affichage_facture() {
+function affichage_Facture() {
   $connexion = mysqli_connect($host,$user,$mdp,$bdd);
   if($connexion==NULL) {
     die("pb connexion");
@@ -207,7 +207,7 @@ function affichage_facture() {
 }
 
 
-function affichage_anime() {
+function affichage_Anime() {
   $connexion = mysqli_connect($host,$user,$mdp,$bdd);
   if($connexion==NULL) {
     die("pb connexion");
@@ -230,7 +230,7 @@ function affichage_anime() {
   print("</table>");
 }
 
-function affichage_participe() {
+function affichage_Participe() {
   $connexion = mysqli_connect($host,$user,$mdp,$bdd);
   if($connexion==NULL) {
     die("pb connexion");
@@ -253,7 +253,7 @@ function affichage_participe() {
   print("</table>");
 }
 
-function affichage_payee() {
+function affichage_Payee() {
   $connexion = mysqli_connect($host,$user,$mdp,$bdd);
   if($connexion==NULL) {
     die("pb connexion");
