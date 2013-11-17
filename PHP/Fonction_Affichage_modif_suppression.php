@@ -206,22 +206,68 @@ function affichage_facture() {
   print("</table>");
 }
 
-// question date, je le finis demain.
+
 function affichage_anime() {
   $connexion = mysqli_connect($host,$user,$mdp,$bdd);
   if($connexion==NULL) {
     die("pb connexion");
     return;
   }
-  $req = "SELECT a.id_activite, a.nom_activite, l.nom_lieu 
-  FROM Anime a, activite ac
-  WHERE a.id_lieu = l.id_lieu";
+  $req = "SELECT p.nom_personne, ac.nom_activite, a.id_date
+  FROM Anime a, activite ac, personne p
+  WHERE a.id_personne = p.id_personne AND a.id_activite = ac.id_activite";
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"3\">Anime</th></tr>
-         <tr><th>Nom Activité</th><th>Lieu</th><th>Actions</th></tr>");
+         <tr><th>Nom personne</th><th>Nom activité</th><th>Date</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
-    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
+    print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
+    <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
+    <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
+    style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
+  }
+  print("</table>");
+}
+
+function affichage_participe() {
+  $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+  if($connexion==NULL) {
+    die("pb connexion");
+    return;
+  }
+  $req = "SELECT p.nom_personne, ac.nom_activite, pa.id_date
+  FROM participe pa, activite ac, personne p
+  WHERE pa.id_personne = p.id_personne AND pa.id_activite = ac.id_activite";
+  $result = $connexion -> $req;
+  print("<table>
+         <tr><th colspan=\"3\">Participe</th></tr>
+         <tr><th>Nom personne</th><th>Nom activité</th><th>Date</th><th>Actions</th></tr>");
+  while($ligne = $result -> Fetch_array()) {
+    print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
+    <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
+    <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
+    style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
+  }
+  print("</table>");
+}
+
+function affichage_payee() {
+  $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+  if($connexion==NULL) {
+    die("pb connexion");
+    return;
+  }
+  $req = "SELECT p.id_facture, m.libelle_mode_paiement, p.montant
+  FROM mode_paiement m, payee p
+  WHERE p.id_mode_paiement = m.id_mode_paiement";
+  $result = $connexion -> $req;
+  print("<table>
+         <tr><th colspan=\"3\">Payée</th></tr>
+         <tr><th>id facture</th><th>Libelle mode paiement</th><th>Montant</th><th>Actions</th></tr>");
+  while($ligne = $result -> Fetch_array()) {
+    print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
