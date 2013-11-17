@@ -18,7 +18,7 @@ function affichage_Activite() {
          <tr><th colspan=\"3\">Activité</th></tr>
          <tr><th>Nom Activité</th><th>Lieu</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
-    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td></tr>
+    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
@@ -39,7 +39,7 @@ function affichage_Lieu() {
          <tr><th colspan=\"2\">Lieu</th></tr>
          <tr><th>Nom Lieu</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
-    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td></tr>
+    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
@@ -60,7 +60,7 @@ function affichage_Tel() {
          <tr><th colspan=\"3\">Telephone</th></tr>
          <tr><th>Numero de telephone</th><th>Nom de la personne</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
-    print("<tr><td>".$ligne[0]."/<td><td>".$ligne[1]."/<td></tr>
+    print("<tr><td>".$ligne[0]."/<td><td>".$ligne[1]."/<td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
@@ -82,7 +82,7 @@ function affichage_Emplacement() {
          <tr><th colspan=\"4\">Emplacement</th></tr>
          <tr><th>Id emplacement</th><th>Prix emplacement</th><th>Libelle type emplacement</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
-    print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."/<td></tr>
+    print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."/<td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
@@ -103,7 +103,7 @@ function affichage_Type_Emplacement() {
          <tr><th colspan=\"2\">Type Emplacement</th></tr>
          <tr><th>Libelle type emplacement</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
-    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td></tr>
+    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
@@ -124,7 +124,7 @@ function affichage_Mode_Paiement() {
          <tr><th colspan=\"2\">Mode Paiement</th></tr>
          <tr><th>Libelle Mode Paiement</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
-    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td></tr>
+    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
@@ -133,6 +133,7 @@ function affichage_Mode_Paiement() {
   print("</table>");
 }
 
+/*
 function affichage_Personne() {
   $connexion = mysqli_connect($host,$user,$mdp,$bdd);
   if($connexion==NULL) {
@@ -147,7 +148,56 @@ function affichage_Personne() {
          <tr><th>Nom</th><th>Adresse Email</th><th>Nom accompagnateur</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."/<td>
-    <td>".$ligne[3]."/<td></tr>
+    <td>".$ligne[3]."/<td>
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
+    <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
+    <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
+    style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
+  }
+  print("</table>");
+}
+*/
+
+function affichage_reservation() {
+  $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+  if($connexion==NULL) {
+    die("pb connexion");
+    return;
+  }
+  $req = "SELECT r.id_reservation, r.nombre_jour, r.date_debut, r.date_fin, p.nom_personne, e.id_emplacement 
+  FROM Reservation r, Personne p, Emplacement e
+  WHERE r.id_personne = p.id_personne AND p.id_emplacement = e.id_emplacement";
+  $result = $connexion -> $req;
+  print("<table>
+         <tr><th colspan=\"6\">Reservation</th></tr>
+         <tr><th>Nombre jours</th><th>Nom de la personne</th><th>Date début</th><th>Date fin</th>
+         <th>Id emplacement</th><th>Actions</th></tr>");
+  while($ligne = $result -> Fetch_array()) {
+    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."/<td>
+    <td>".$ligne[3]."/<td><td>".$ligne[4]."/<td><td>".$ligne[5]."/<td>
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
+    <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
+    <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
+    style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
+  }
+  print("</table>");
+}
+
+function affichage_facture() {
+  $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+  if($connexion==NULL) {
+    die("pb connexion");
+    return;
+  }
+  $req = "SELECT * FROM Facture";
+  $result = $connexion -> $req;
+  print("<table>
+         <tr><th colspan=\"5\">Facture</th></tr>
+         <tr><th>Description facture</th><th>Montant</th><th>Date facture</th><th>Id facture</th>
+         <th>Actions</th></tr>");
+  while($ligne = $result -> Fetch_array()) {
+    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."/<td>
+    <td>".$ligne[3]."/<td><td>".$ligne[4]."/<td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
