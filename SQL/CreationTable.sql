@@ -22,8 +22,14 @@ create table PERSONNE(
  	nom_personne varchar(60),
 	prenom varchar(60),
   	adresse_email varchar(60),
-	accompagnateur int,
   PRIMARY KEY(id_personne))Engine=InnoDB;
+  
+create table ACCOMPAGNE(
+	id_pere int not null,
+	id_fils int not null,
+	primary key(id_pere, id_fils),
+	foreign key(id_pere) references PERSONNE(id_personne),
+	foreign key(id_fils) references PERSONNE(id_personne))Engine=InnoDB;
 
 drop table if exists EMPLACEMENT;
 create table EMPLACEMENT(
