@@ -1,19 +1,20 @@
  Architecture générale :
 
-	Dimension: 100% de large (Nom : body )
+	Dimension: 100% de large (body )
+			Contenu : 80% ( #contenu )
 	Disposition des éléments: De haut en bas
-		Une bannière (Nom : #banniere )
-		Un menu horizontal (Nom : #menu )
-		Le contenu (Nom : #contenu )
-		Le pied de page : (Nom : #piedPage )
+		Une bannière (Nom : #banniere ) avec un slogan ( #slogan )
+		Un menu horizontal ( #menu )
+		Le contenu ( #contenu )
+		Le pied de page : ( #piedPage )
 
 
 Couleurs
 
-	Couleur de fond du site:  #FFFFFF (Blanc) (Nom : body )
-	Couleur de fond des pages: #FFFFFF (Blanc) (Nom : #contenu )
-	Couleur du fond du bandeau: Photo  (Nom : #banniere )
-	Couleur du fond de menu: # (Nom : #menu )
+	Couleur de fond du site:  #EEEADE (Blanc) ( body )
+	Couleur de fond des pages: #EEEADE (Blanc) ( #contenu )
+	Couleur du fond du bandeau: Photo  ( #banniere )
+	Couleur du fond de menu: #8B2274 (Violet) ( #menu )
 
 	Couleur des titres: #333333 (Gris anthracite)
 	Couleur des textes: #000000 (Noir)
@@ -27,11 +28,6 @@ Polices
 	Police pour le texte (Nom : p ) : Lucida grande
 
 
-Logo
-	http://us.123rf.com/400wm/400/400/vectomart/vectomart1104/vectomart110400103/9321195-illustration-de-la-paillote-sur-lonely-beach-avec-cocotier.jpg
-
-
 Slogan
 
 	Camping Amazing !
-	
