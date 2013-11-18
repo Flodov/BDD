@@ -22,9 +22,9 @@ function formulaire_ajout_Activite() {
 		while($ligne = $res -> Fetch_array()){
 		  print("<option value=\"".$ligne[0]."\">".$ligne[1]."</option>");
 		}
-		?>
-		</select></div><br/>
+	</select></div><br/>
 	</div>
+	<input type=\"hidden\" name=\"ajout\" value=\"".$_GET['nom_lieu']."\">
 	<input type="submit" value="valider">
 	</form>
 <?php 
