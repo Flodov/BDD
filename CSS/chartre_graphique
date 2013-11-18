@@ -1,21 +1,20 @@
  Architecture générale :
 
-	Dimension: 980px de large (Nom : #wrapper )
+	Dimension: 100% de large (Nom : body )
 	Disposition des éléments: De haut en bas
-		Une bannière avec le logo (Nom : #logo ) et le slogan (Nom : #banniere ) à gauche 
+		Une bannière (Nom : #banniere )
 		Un menu horizontal (Nom : #menu )
 		Le contenu (Nom : #contenu )
-		Le pied de page avec les liens “contact” et “A propos” (Nom : #piedPage )
+		Le pied de page : (Nom : #piedPage )
 
 
 Couleurs
 
-	Couleur de fond du site:  #91edea (Bleu cyan) (Nom : body )
-	Couleur de fond des pages: #ffffff (Blanc) (Nom : #contenu )
-	Couleur du fond du bandeau: #edbf91 (Beige)  (Nom : #banniere )
-	Couleur du fond de menu: #edbf91(Beige) (Nom : #menu )
+	Couleur de fond du site:  #FFFFFF (Blanc) (Nom : body )
+	Couleur de fond des pages: #FFFFFF (Blanc) (Nom : #contenu )
+	Couleur du fond du bandeau: Photo  (Nom : #banniere )
+	Couleur du fond de menu: # (Nom : #menu )
 
-	Couleur du slogan : #ed9193 (Rouge pale)
 	Couleur des titres: #333333 (Gris anthracite)
 	Couleur des textes: #000000 (Noir)
 	Couleur des liens:  #27A0EC (Bleu)
