@@ -22,6 +22,7 @@ create table PERSONNE(
  	nom_personne varchar(60),
 	prenom varchar(60),
   	adresse_email varchar(60),
+  	estPersonel boolean,
   PRIMARY KEY(id_personne))Engine=InnoDB;
   
 
