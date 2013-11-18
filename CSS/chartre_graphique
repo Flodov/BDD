@@ -5,7 +5,7 @@
 		Une bannière avec le logo (Nom : #logo ) et le slogan (Nom : #banniere ) à gauche 
 		Un menu horizontal (Nom : #menu )
 		Le contenu (Nom : #contenu )
-		Le pied de page avec les liens “contact” et “A propos”
+		Le pied de page avec les liens “contact” et “A propos” (Nom : #piedPage )
 
 
 Couleurs
