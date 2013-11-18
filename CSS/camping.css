@@ -16,7 +16,7 @@ body {
 }
 
 #slogan {
-	width: 15%;
+	width: 200px;
 	height: 100px;
 	margin-left: 10%;
 	border-bottom-left-radius: 10px 10px;
@@ -25,7 +25,7 @@ body {
 	background-color: #EEEADE;
 	background-image: url('images/slogan.png');
 	background-repeat:no-repeat;
-	padding: 5px 0 0 px;
+	padding: 5px 0 0 5px;
 }
 
 #menu {
