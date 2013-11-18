@@ -16,9 +16,9 @@ function requete($query) // renvoie le contenue de la requete dans un tableau
                 print("");
 }
 
-function liste_personne_accompagne($) 
+function liste_personne_qui_peut_accompagner($) 
 {
-    $requete = "select * FROM PERSONNE WHERE not;";
+    $requete = "select * FROM PERSONNE WHERE estPersonnel=0;";
     $reponse = requete($requete);
     return $reponse; 
 }
