@@ -29,6 +29,4 @@ function formulaire_ajout_Activite() {
 	</form>
 <?php
 }
-
-
 ?>
