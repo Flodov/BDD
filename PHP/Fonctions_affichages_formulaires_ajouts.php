@@ -29,4 +29,17 @@ function formulaire_ajout_Activite() {
 	</form>
 <?php
 }
-?> 
+
+function formulaire_ajout_Lieu() {
+?>
+	<form method="get" action="page_ajout.php">
+  	<div id="lieu_champ1">
+  		<label for="nom_lieu">Nom du lieu</label>
+  		<input type="text" id="nom_lieu" name="nom_lieu">
+  	</div>
+  	<input type="submit" value="valider">
+	</form>
+<?php
+}
+
+?>
