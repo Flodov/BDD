@@ -16,7 +16,7 @@ function formulaire_ajout_Activite() {
 		<label for="nom_lieu">Nom du lieu</label>
 		<select id="nom_lieu" name="nom_lieu">");
 		<?php
-    		$connexion = mysqli_connect($host,$user,$mdp,$bdd);
+		$connexion = mysqli_connect($host,$user,$mdp,$bdd);
 		$req = "SELECT * FROM Lieu";
 		$res = $connexion -> query($req);
 		while($ligne = $res -> Fetch_array()){
@@ -53,7 +53,7 @@ function formulaire_ajout_Tel() {
 		<label for="nom_personne">Nom du lieu</label>
 		<select id="nom_personne" name="nom_personne">");
 		<?php
-    		$connexion = mysqli_connect($host,$user,$mdp,$bdd);
+		$connexion = mysqli_connect($host,$user,$mdp,$bdd);
 		$req = "SELECT id_personne, nom_personne FROM Personne";
 		$res = $connexion -> query($req);
 		while($ligne = $res -> Fetch_array()){
