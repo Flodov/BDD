@@ -24,12 +24,6 @@ create table PERSONNE(
   	adresse_email varchar(60),
   PRIMARY KEY(id_personne))Engine=InnoDB;
   
-create table ACCOMPAGNE(
-	id_pere int not null,
-	id_fils int not null,
-	primary key(id_pere, id_fils),
-	foreign key(id_pere) references PERSONNE(id_personne),
-	foreign key(id_fils) references PERSONNE(id_personne))Engine=InnoDB;
 
 drop table if exists EMPLACEMENT;
 create table EMPLACEMENT(
@@ -49,6 +43,15 @@ create table RESERVATION(
 	FOREIGN KEY(id_personne) REFERENCES PERSONNE(id_personne),
 	FOREIGN KEY(id_emplacement) REFERENCES EMPLACEMENT(id_emplacement),
   PRIMARY KEY(id_reservation))Engine=InnoDB;
+  
+create table ACCOMPAGNE(
+	id_pere int not null,
+	id_fils int not null,
+	id_reservation int not null,
+	primary key(id_pere, id_fils, id_reservation),
+	foreign key(id_pere) references PERSONNE(id_personne),
+	foreign key(id_fils) references PERSONNE(id_personne),
+	foreign key(id_reservation) references RESERVATION(id_reservation))Engine=InnoDB;
 
 drop table if exists FACTURE;
 create table FACTURE(
