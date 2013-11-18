@@ -27,7 +27,7 @@ function formulaire_ajout_Activite() {
 	</div>
 	<input type="submit" value="valider">
 	</form>
-<?php 
+<?php
 }
 
 
