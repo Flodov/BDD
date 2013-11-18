@@ -18,28 +18,28 @@ Etapes de développement :
 
 3 Formulaire d'insertion : 
 
-	3.1 Ajout d'une personne (fait à vérifier)
+	3.1 Ajout d'une personne (sql fait manque formulaire)
 	
-		3.1.1 Ajout d'un numéro de téléphone (fait à vérifier)
-		3.1.2 Ajout d'un accompagnateur (fait à vérifier)
+		3.1.1 Ajout d'un numéro de téléphone (sql fait manque formulaire)
+		3.1.2 Ajout d'un accompagnateur (sql fait manque formulaire)
 	
-	3.2 Ajout d'un emplacement (fait à vérifier)
+	3.2 Ajout d'un emplacement (sql fait manque formulaire)
 	
-		3.2.1 Ajout d'un type (fait à vérifier)
+		3.2.1 Ajout d'un type (sql fait manque formulaire)
 	
-	3.3 Ajout d'une activité  (fait à vérifier)
+	3.3 Ajout d'une activité  (sql fait manque formulaire)
 	
-		3.3.1 Ajout d'un lieu (fait à vérifier)
+		3.3.1 Ajout d'un lieu (sql fait manque formulaire)
 		
 		
-	3.4 Ajout d'une participation (table participe) (fait à vérifier)
+	3.4 Ajout d'une participation (table participe) (sql fait manque formulaire)
 	
 	
-	3.5 Ajout d'une animation (table anime) (fait à vérifier)
+	3.5 Ajout d'une animation (table anime) (sql fait manque formulaire)
 
-	3.6 Ajout de reservation (fait à vérifier)
+	3.6 Ajout de reservation (sql fait manque formulaire)
 	
-		3.6.1 implicite => ajout de facture (fait à vérifier)
+		3.6.1 implicite => ajout de facture (sql fait manque formulaire)
 			En effet on demandera les différents modes de paiements
 			et en fonction de cela on établira une facture par mode
 			
@@ -50,18 +50,18 @@ Etapes de développement :
 
 	4.1 Modif de personne 
 	
-		4.1.1 Modif du num (fait à vérifier)
-		4.1.2 modif de l'accompagnateur (fait à vérifier)
+		4.1.1 Modif du num (sql fait manque formulaire)
+		4.1.2 modif de l'accompagnateur (sql fait manque formulaire)
 		
-	4.2 Modif de emplacement (fait à vérifier)
+	4.2 Modif de emplacement (sql fait manque formulaire)
 	
-	4.3 Anime (fait à vérifier)
+	4.3 Anime (sql fait manque formulaire)
 	
-	4.4 Participe (fait à vérifier)
+	4.4 Participe (sql fait manque formulaire)
 	
 5 Formulaire de suppression : 
 
-	5.1 RESERVATION (annulation) => facture (fait à vérifier)
+	5.1 RESERVATION (annulation) => facture (sql fait manque formulaire)
 	
 	
 ----------------------------
