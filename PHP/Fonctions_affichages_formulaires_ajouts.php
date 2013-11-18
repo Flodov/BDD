@@ -66,4 +66,35 @@ function formulaire_ajout_Tel() {
 	</form>
 <?php
 }
+
+function formulaire_ajout_Emplacement() {
+ ?>
+ <fieldset>
+ <form method="get" action="page_ajout.php">
+  <div id="emplacement_champ1">
+  <label for="id_emp">Id de l'emplacement</label>
+  <input type="text" id="id_emp" name="num_tel">
+  </div>
+  <div id="emplacement_champ2">
+                <label for="prix_emp">Prix</label>
+				<input type="text" name="prix_emp"><br/>
+				</div>
+				<div id="emplacement_champ3">
+				<label for="type_emp">Type de l'emplacement</label>
+                <select id="type_emp" name="type_emp">");
+                <?php
+                $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+                $req = "SELECT id_type_emplacement, libelle_type_emplacement FROM Type_emplacement";
+                $res = $connexion -> query($req);
+                while($ligne = $res -> Fetch_array()){
+                  print("<option value=\"".$ligne[0]."\">".$ligne[1]."</option>");
+                }
+                ?>
+        </select></div><br/>
+        <input type="submit" value="valider">
+        </form></fieldset>
+<?php
+}
+
+
 ?>
