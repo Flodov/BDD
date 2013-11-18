@@ -1,4 +1,3 @@
-
 function requete($query) // renvoie le contenue de la requete dans un tableau
 {
 	include("ID.php");
@@ -17,9 +16,9 @@ function requete($query) // renvoie le contenue de la requete dans un tableau
                 print("");
 }
 
-function liste_personne() 
+function liste_personne_accompagne($) 
 {
-    $requete = "select * FROM PERSONNE;";
+    $requete = "select * FROM PERSONNE WHERE not;";
     $reponse = requete($requete);
     return $reponse; 
 }
