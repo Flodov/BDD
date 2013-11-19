@@ -96,5 +96,59 @@ function formulaire_ajout_Emplacement() {
 <?php
 }
 
+function formulaire_ajout_Type_Emplacement() {
+?>
+	<form method="get" action="page_ajout.php">
+  	<div id="type_emp_champ1">
+  		<label for="libellete">Libelle du Type d'emplacement</label>
+  		<input type="text" id="libellete" name="libte">
+  	</div>
+  	<input type="submit" value="valider">
+	</form>
+<?php
+}
+
+function formulaire_ajout_Mode_Paiement() {
+?>
+	<form method="get" action="page_ajout.php">
+  	<div id="mode_paiement_champ1">
+  		<label for="libellemp">Libelle du mode de paiement</label>
+  		<input type="text" id="libellemp" name="libmp">
+  	</div>
+  	<input type="submit" value="valider">
+	</form>
+<?php
+}
+
+function formulaire_ajout_Personne() {
+ ?>
+ <fieldset>
+ <form method="get" action="page_ajout.php">
+  <div id="personne_champ1">
+  <label for="nom_pers">Id de l'emplacement</label>
+  <input type="text" id="nom_pers" name="nom_pers">
+  </div>
+  <div id="personne_champ2">
+                <label for="email">Adremme Email</label>
+				<input type="text" id="email" name="email"><br/>
+				</div>
+				<div id="personne_champ3">
+				<label for="prenom_pers">Prenom</label>
+				<input type="text" id="prenom_pers" name="prenom_pers"><br/>
+				<label for="accomp">Accompagnateur</label>
+                <select id="accomp" name="accomp">");
+                <?php
+                $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+                $req = "SELECT id_personne, nom_personne FROM Personne";
+                $res = $connexion -> query($req);
+                while($ligne = $res -> Fetch_array()){
+                  print("<option value=\"".$ligne[0]."\">".$ligne[1]."</option>");
+                }
+                ?>
+        </select></div><br/>
+        <input type="submit" value="valider">
+        </form></fieldset>
+<?php
+}
 
 ?>
