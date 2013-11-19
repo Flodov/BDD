@@ -130,7 +130,7 @@ function formulaire_ajout_Personne() {
   <input type="text" id="nom_pers" name="nom_pers">
   </div>
   <div id="personne_champ2">
-  	<label for="email">Adremme Email</label>
+  	<label for="email">Adresse Email</label>
 	<input type="text" id="email" name="email"><br/>
 	</div>
 	<div id="personne_champ3">
@@ -144,6 +144,50 @@ function formulaire_ajout_Personne() {
         $res = $connexion -> query($req);
         while($ligne = $res -> Fetch_array()){
              print("<option value=\"".$ligne[0]."\">".$ligne[1]."</option>");
+        }
+        ?>
+        </select></div><br/>
+        <input type="submit" value="valider">
+        </form></fieldset>
+<?php
+}
+
+function formulaire_ajout_Reservation() {
+ ?>
+ <fieldset>
+ <form method="get" action="page_ajout.php">
+  <div id="reservation_champ1">
+  <label for="nbjours">Nombre de jours</label>
+  <input type="text" id="nbjours" name="nbjours">
+  </div>
+  <div id="reservation_champ2">
+  	<label for="nom_personne">Nom de la personne</label>
+        <select id="nom_personne" name="nom_personne">");
+        <?php
+        $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+        $req = "SELECT id_personne, nom_personne FROM Personne";
+        $res = $connexion -> query($req);
+        while($ligne = $res -> Fetch_array()){
+             print("<option value=\"".$ligne[0]."\">".$ligne[1]."</option>");
+        }
+        ?>
+        </select></div><br/>
+         <div id="reservation_champ3">
+    	<label for="date_deb">Date de début</label>
+	<input type="date" id="date_deb" name="date_deb"><br/>
+	</div>
+	<div id="reservation_champ4">
+	<label for="date_fin">Date de fin</label>
+	<input type="date" id="date_fin" name="date_fin"><br/>
+	<div id="reservation_champ5">
+	<label for="id_emp">Id emplacement</label>
+        <select id="id_emp" name="id_emp">");
+        <?php
+        $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+        $req = "SELECT id_emplacement FROM Emplacement";
+        $res = $connexion -> query($req);
+        while($ligne = $res -> Fetch_array()){
+             print("<option value=\"".$ligne[0]."\">".$ligne[0]."</option>");
         }
         ?>
         </select></div><br/>
