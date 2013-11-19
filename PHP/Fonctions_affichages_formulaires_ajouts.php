@@ -30,6 +30,7 @@ function formulaire_ajout_Activite() {
 <?php
 }
 
+
 function formulaire_ajout_Lieu() {
 ?>
 	<form method="get" action="page_ajout.php">
