@@ -196,4 +196,37 @@ function formulaire_ajout_Reservation() {
 <?php
 }
 
+function formulaire_ajout_Facture() {
+ ?>
+ <fieldset>
+ <form method="get" action="page_ajout.php">
+  <div id="facture_champ1">
+  <label for="desc_fact">Description de la facture</label>
+  <input type="text" id="desc_fact" name="desc_fact">
+  </div>
+  <div id="facture_champ2">
+  	<label for="montant_fact">Montant de la facture</label>
+        <input type="text" id="montant_fact" name="montant_fact">");
+  </div><br/>
+  <div id="facture_champ3">
+    	<label for="date_fact">Date de la facture</label>
+	<input type="date" id="date_fact" name="date_fact"><br/>
+	</div>
+	<div id="facture_champ4">
+	<label for="id_reserv"></label>
+        <select id="id_reserv" name="id_reserv">");
+        <?php
+        $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+        $req = "SELECT id_reservation FROM Reservation";
+        $res = $connexion -> query($req);
+        while($ligne = $res -> Fetch_array()){
+             print("<option value=\"".$ligne[0]."\">".$ligne[0]."</option>");
+        }
+        ?>
+        </select></div><br/>
+        <input type="submit" value="valider">
+        </form></fieldset>
+<?php
+}
+
 ?>
