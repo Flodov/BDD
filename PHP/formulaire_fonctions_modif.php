@@ -1,5 +1,5 @@
 <?php
-
+require_once("connection.php")
 function affichage_modif_personne($id_personne, $new_nom_personne, $new_prenom, $new_adresse_email, $accompagnateur) // Affiche
 {
     ?>
