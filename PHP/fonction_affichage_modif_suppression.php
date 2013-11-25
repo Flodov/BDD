@@ -216,10 +216,12 @@ function affichage_Anime() {
          <tr><th>Nom personne</th><th>Nom activité</th><th>Date</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
-    <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif1=".$ligne[0]."&modif2=".$ligne[1]."
+    &modif3=".$ligne[2]"\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
-    <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
-    style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
+    <a href=\"affichage.php?suppr1=".$ligne[0]."&suppr2=".$ligne[1]."&suppr3=".$ligne[2]."\">
+    <img src=\"suppr.PNG\" alt=\"faux\" 
+    style=\" width : 20px; height=20px;\"/></a></td></tr>");
   }
   print("</table>");
 }
@@ -239,10 +241,12 @@ function affichage_Participe() {
          <tr><th>Nom personne</th><th>Nom activité</th><th>Date</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
-    <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif1=".$ligne[0]."&modif2=".$ligne[1]."
+    &modif3=".$ligne[2]"\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
-    <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
-    style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
+    <a href=\"affichage.php?suppr1=".$ligne[0]."&suppr2=".$ligne[1]."&suppr3=".$ligne[2]."\">
+    <img src=\"suppr.PNG\" alt=\"faux\" 
+    style=\" width : 20px; height=20px;\"/></a></td></tr>");
   }
   print("</table>");
 }
@@ -262,10 +266,11 @@ function affichage_Payee() {
          <tr><th>id facture</th><th>Libelle mode paiement</th><th>Montant</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
-    <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif1=".$ligne[0]."&modif2=".$ligne[1]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
-    <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
-    style=\" width : 20px; height=20px;\"/></a></td></tr>"); 
+    <a href=\"affichage.php?suppr1=".$ligne[0]."&suppr2=".$ligne[1]."\">
+    <img src=\"suppr.PNG\" alt=\"faux\" 
+    style=\" width : 20px; height=20px;\"/></a></td></tr>");
   }
   print("</table>");
 }
