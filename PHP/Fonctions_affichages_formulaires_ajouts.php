@@ -22,6 +22,11 @@ function formulaire_ajout_Activite() {
 	</select></div><br/>
 	</div>
 	<input type="submit" value="valider">
+	<?php
+	if(isset($_GET['modif'])) {
+		print("<input type=\"hidden\" name=\"modif\" value=\"".$_GET['modif'].">");
+	}
+	?>
 	</form>
 <?php
 }
@@ -35,6 +40,11 @@ function formulaire_ajout_Lieu() {
   		<input type="text" id="nom_lieu" name="nom_lieu">
   	</div>
   	<input type="submit" value="valider">
+  	<?php
+  	if(isset($_GET['modif'])) {
+		print("<input type=\"hidden\" name=\"modif\" value=\"".$_GET['modif'].">");
+	}
+	?>
 	</form>
 <?php
 }
@@ -60,6 +70,11 @@ function formulaire_ajout_Tel() {
 	</select></div><br/>
 	</div>
 	<input type="submit" value="valider">
+	<?php
+	if(isset($_GET['modif'])) {
+		print("<input type=\"hidden\" name=\"modif\" value=\"".$_GET['modif'].">");
+	}
+	?>
 	</form>
 <?php
 }
@@ -89,6 +104,11 @@ function formulaire_ajout_Emplacement() {
                 ?>
         </select></div><br/>
         <input type="submit" value="valider">
+        <?php
+	if(isset($_GET['modif'])) {
+		print("<input type=\"hidden\" name=\"modif\" value=\"".$_GET['modif'].">");
+	}
+	?>
         </form></fieldset>
 <?php
 }
@@ -101,6 +121,11 @@ function formulaire_ajout_Type_Emplacement() {
   		<input type="text" id="libellete" name="libte">
   	</div>
   	<input type="submit" value="valider">
+  	<?php
+	if(isset($_GET['modif'])) {
+		print("<input type=\"hidden\" name=\"modif\" value=\"".$_GET['modif'].">");
+	}
+	?>
 	</form>
 <?php
 }
@@ -113,6 +138,11 @@ function formulaire_ajout_Mode_Paiement() {
   		<input type="text" id="libellemp" name="libmp">
   	</div>
   	<input type="submit" value="valider">
+  	<?php
+	if(isset($_GET['modif'])) {
+		print("<input type=\"hidden\" name=\"modif\" value=\"".$_GET['modif'].">");
+	}
+	?>
 	</form>
 <?php
 }
@@ -144,6 +174,11 @@ function formulaire_ajout_Personne() {
         ?>
         </select></div><br/>
         <input type="submit" value="valider">
+        <?php
+	if(isset($_GET['modif'])) {
+		print("<input type=\"hidden\" name=\"modif\" value=\"".$_GET['modif'].">");
+	}
+	?>
         </form></fieldset>
 <?php
 }
@@ -188,6 +223,11 @@ function formulaire_ajout_Reservation() {
         ?>
         </select></div><br/>
         <input type="submit" value="valider">
+        <?php
+	if(isset($_GET['modif'])) {
+		print("<input type=\"hidden\" name=\"modif\" value=\"".$_GET['modif'].">");
+	}
+	?>
         </form></fieldset>
 <?php
 }
@@ -221,6 +261,11 @@ function formulaire_ajout_Facture() {
         ?>
         </select></div><br/>
         <input type="submit" value="valider">
+        <?php
+	if(isset($_GET['modif'])) {
+		print("<input type=\"hidden\" name=\"modif\" value=\"".$_GET['modif'].">");
+	}
+	?>
         </form></fieldset>
 <?php
 }
@@ -259,6 +304,13 @@ function formulaire_ajout_Anime() {
 	<input type="date" id="anime_date" name="anime_date"><br/>
 	</div>
         <input type="submit" value="valider">
+        <?php
+	if(isset($_GET['modif1']) && isset($_GET['modif2']) && isset($_GET['modif3'])) {
+		print("<input type=\"hidden\" name=\"modif1\" value=\"".$_GET['modif1'].">");
+		print("<input type=\"hidden\" name=\"modif2\" value=\"".$_GET['modif2'].">");
+		print("<input type=\"hidden\" name=\"modif3\" value=\"".$_GET['modif3'].">");
+	}
+	?>
         </form></fieldset>
 <?php
 }
@@ -297,6 +349,13 @@ function formulaire_ajout_Participe() {
 	<input type="date" id="participe_date" name="participe_date"><br/>
 	</div>
         <input type="submit" value="valider">
+        <?php
+	if(isset($_GET['modif1']) && isset($_GET['modif2']) && isset($_GET['modif3'])) {
+		print("<input type=\"hidden\" name=\"modif1\" value=\"".$_GET['modif1'].">");
+		print("<input type=\"hidden\" name=\"modif2\" value=\"".$_GET['modif2'].">");
+		print("<input type=\"hidden\" name=\"modif3\" value=\"".$_GET['modif3'].">");
+	}
+	?>
         </form></fieldset>
 <?php
 }
@@ -335,6 +394,12 @@ function formulaire_ajout_Payee() {
 	<input type="text" id="payee_montant" name="payee_montant"><br/>
 	</div>
         <input type="submit" value="valider">
+        <?php
+        if(isset($_GET['modif1']) && isset($_GET['modif2'])) {
+		print("<input type=\"hidden\" name=\"modif1\" value=\"".$_GET['modif1'].">");
+		print("<input type=\"hidden\" name=\"modif2\" value=\"".$_GET['modif2'].">");
+        }	
+	?>
         </form></fieldset>
 <?php
 }
