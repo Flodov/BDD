@@ -1,10 +1,5 @@
 <?php
-
-$host = localhost;
-$user = root;
-$mdp = web;
-$bdd = projet_bdd_iut;
-
+require_once("connection.php")
 
 function affichage_Activite() {
   $connexion = mysqli_connect($host,$user,$mdp,$bdd);
