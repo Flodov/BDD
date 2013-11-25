@@ -1,6 +1,5 @@
-define('user','root', true );
-define('web', 'web', true );
-define('bdd','projet_bdd_iut', true );
+<?php
+require_once("connection.php")
 
 function suppr_reservation($id_reservation)
     $link = mysqli_connect("localhost",'$user','$web', "$bdd");
@@ -13,4 +12,4 @@ function suppr_reservation($id_reservation)
     }
     mysqli_close($link);
 }
-
+?>
