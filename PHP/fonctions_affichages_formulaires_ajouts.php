@@ -23,6 +23,10 @@ function formulaire_ajout_Activite() {
 	</div>
 	<input type="submit" value="valider">
 	<?php
+	// Renvoi de l'argument modif qui a été envoyé dans le cas d'un clic sur le lien modif
+	// dans l'affichage de la table.
+	// On renvoie cet argument qui contient l'id de la ligne à modifier pour pouvoir
+	// exécuter la requete.
 	if(isset($_GET['modif'])) {
 		print("<input type=\"hidden\" name=\"modif\" value=\"".$_GET['modif'].">");
 	}
