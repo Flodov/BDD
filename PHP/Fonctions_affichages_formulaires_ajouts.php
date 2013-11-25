@@ -225,4 +225,118 @@ function formulaire_ajout_Facture() {
 <?php
 }
 
+function formulaire_ajout_Anime() {
+ ?>
+ <fieldset>
+ <form method="get" action="page_ajout.php">
+  <div id="anime_champ1">
+	<label for="nom_pers">Nom personne</label>
+        <select id="anime_nom" name="anime_nom">");
+        <?php
+        $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+        $req = "SELECT id_personne, nom_personne FROM Personne";
+        $res = $connexion -> query($req);
+        while($ligne = $res -> Fetch_array()){
+             print("<option value=\"".$ligne[0]."\">".$ligne[1]."</option>");
+        }
+        ?>
+        </select></div><br/>
+  </div>
+  <div id="anime_champ2">
+	<label for="anime_activite">Nom activité</label>
+        <select id="anime_activite" name="anime_activite">");
+        <?php
+        $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+        $req = "SELECT id_activite, nom_activite FROM Activite";
+        $res = $connexion -> query($req);
+        while($ligne = $res -> Fetch_array()){
+             print("<option value=\"".$ligne[0]."\">".$ligne[1]."</option>");
+        }
+        ?>
+        </select></div><br/>
+	<div id="anime_champ3">
+	<label for="anime_date">Date</label>
+	<input type="date" id="anime_date" name="anime_date"><br/>
+	</div>
+        <input type="submit" value="valider">
+        </form></fieldset>
+<?php
+}
+
+function formulaire_ajout_Participe() {
+ ?>
+ <fieldset>
+ <form method="get" action="page_ajout.php">
+  <div id="participe_champ1">
+	<label for="nom_pers">Nom personne</label>
+        <select id="anime_nom" name="anime_nom">");
+        <?php
+        $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+        $req = "SELECT id_personne, nom_personne FROM Personne";
+        $res = $connexion -> query($req);
+        while($ligne = $res -> Fetch_array()){
+             print("<option value=\"".$ligne[0]."\">".$ligne[1]."</option>");
+        }
+        ?>
+        </select></div><br/>
+  </div>
+  <div id="participe_champ2">
+	<label for="participe_activite">Nom activité</label>
+        <select id="participe_activite" name="participe_activite">");
+        <?php
+        $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+        $req = "SELECT id_activite, nom_activite FROM Activite";
+        $res = $connexion -> query($req);
+        while($ligne = $res -> Fetch_array()){
+             print("<option value=\"".$ligne[0]."\">".$ligne[1]."</option>");
+        }
+        ?>
+        </select></div><br/>
+	<div id="participe_champ3">
+	<label for="participe_date">Date</label>
+	<input type="date" id="participe_date" name="participe_date"><br/>
+	</div>
+        <input type="submit" value="valider">
+        </form></fieldset>
+<?php
+}
+
+function formulaire_ajout_Payee() {
+ ?>
+ <fieldset>
+ <form method="get" action="page_ajout.php">
+  <div id="payee_champ1">
+	<label for="payee_id_fact">Id de la facture</label>
+        <select id="payee_id_fact" name="payee_id_fact">");
+        <?php
+        $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+        $req = "SELECT id_facture FROM Facture";
+        $res = $connexion -> query($req);
+        while($ligne = $res -> Fetch_array()){
+             print("<option value=\"".$ligne[0]."\">".$ligne[0]."</option>");
+        }
+        ?>
+        </select></div><br/>
+  </div>
+  <div id="payee_champ2">
+	<label for="payee_mode_paie">Mode Paiement</label>
+        <select id="payee_mode_paie" name="payee_mode_paie">");
+        <?php
+        $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+        $req = "SELECT id_mode_paiement, libelle_mode_paiement FROM Mode_paiement";
+        $res = $connexion -> query($req);
+        while($ligne = $res -> Fetch_array()){
+             print("<option value=\"".$ligne[0]."\">".$ligne[1]."</option>");
+        }
+        ?>
+        </select></div><br/>
+	<div id="payee_champ3">
+	<label for="payee_montant">Montant</label>
+	<input type="text" id="payee_montant" name="payee_montant"><br/>
+	</div>
+        <input type="submit" value="valider">
+        </form></fieldset>
+<?php
+}
+
 ?>
