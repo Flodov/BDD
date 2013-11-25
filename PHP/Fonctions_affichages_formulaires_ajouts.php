@@ -1,9 +1,5 @@
 <?php
-$host = localhost;
-$user = root;
-$mdp = web;
-$bdd = projet_bdd_iut;
-
+require_once("connection.php")
 
 function formulaire_ajout_Activite() {
  ?>
