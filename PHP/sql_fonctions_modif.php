@@ -1,8 +1,6 @@
 // Fonction pour modifier
-
-define('user','root', true );
-define('web', 'web', true );
-define('bdd','projet_bdd_iut', true );
+<?php
+require_once("connection.php")
 
 function update_TEL($numTelephone, $new_numTelephone)
     $link = mysqli_connect("localhost",'$user','$web', "$bdd");
@@ -63,3 +61,4 @@ function update_PARTICIPE($id_personne, $id_activite, $new_id_activite, $new_dat
     } 
     mysqli_close($link);
 }
+?>
