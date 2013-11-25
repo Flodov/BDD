@@ -1,8 +1,6 @@
 // Fonction pour ajouter
-
-$user="root";  // nom d'utilisateur'
-$mpd="web";    // Mot de passe utilisateur
-$bdd="projet_bdd_iut";  // nom de votre base de donnay
+<?php
+require_once("connection.php")
 
 function ajouter_personne($nom, $prenom, $email, $accompagnateur )
 {
@@ -83,4 +81,4 @@ function ajouter_FACTURATION($description_facture, $montant_facture, $date_factu
     	print("Message d'erreur :".mysqli_error($link)); 
   	mysqli_close($link);
 }
-
+?>
