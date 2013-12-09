@@ -262,7 +262,7 @@ function affichage_Payee() {
   WHERE p.id_mode_paiement = m.id_mode_paiement";
   $result = $connexion -> $req;
   print("<table>
-         <tr><th colspan=\"3\">Payée</th></tr>
+         <tr><th colspan=\"4\">Payée</th></tr>
          <tr><th>id facture</th><th>Libelle mode paiement</th><th>Montant</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
@@ -274,5 +274,29 @@ function affichage_Payee() {
   }
   print("</table>");
 }
+
+function affichage_Accompagne() {
+ $connexion = mysqli_connect($host,$user,$mdp,$bdd);
+  if($connexion==NULL) {
+    die("pb connexion");
+    return;
+  }
+  $req = "SELECT p.nom_personne, pers.nom_personne, a.id_reservation FROM PERSONNE p, PERSONNE pers, ACCOMPAGNE a
+  WHERE a.id_pere = p.id_personne AND a.id_fils = pers.id_personne";
+  $result = $connexion -> $req;
+    print("<table>
+         <tr><th colspan=\"4\">Payée</th></tr>
+         <tr><th>nom pere</th><th>nom fils</th><th>id_reservation</th><th>Actions</th></tr>");
+ while($ligne = $result -> Fetch_array()) {
+    print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
+    <td style=\"text-align : center;\"><a href=\"affichage.php?modif1=".$ligne[0]."&modif2=".$ligne[1]."\">
+    <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
+    <a href=\"affichage.php?suppr1=".$ligne[0]."&suppr2=".$ligne[1]."\">
+    <img src=\"suppr.PNG\" alt=\"faux\" 
+    style=\" width : 20px; height=20px;\"/></a></td></tr>");
+  }
+  print("</table>");
+}
+  
 
 ?>
