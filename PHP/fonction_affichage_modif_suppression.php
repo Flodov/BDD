@@ -159,8 +159,8 @@ function affichage_Reservation() {
     return;
   }
   $req = "SELECT r.id_reservation, r.nombre_jour, r.date_debut, r.date_fin, p.nom_personne, e.id_emplacement 
-  FROM Reservation r, Personne p, Emplacement e
-  WHERE r.id_personne = p.id_personne AND p.id_emplacement = e.id_emplacement";
+  FROM RESERVATION r, PERSONNE p, EMPLACEMENT e
+  WHERE r.id_personne = p.id_personne AND r.id_emplacement = e.id_emplacement";
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"6\">Reservation</th></tr>
