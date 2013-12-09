@@ -213,7 +213,7 @@ function affichage_Anime() {
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"3\">Anime</th></tr>
-         <tr><th>Nom personne</th><th>Nom activité</th><th>Date</th><th>Actions</th></tr>");
+         <tr><th>Nom personne</th><th>Nom activite</th><th>Date</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif1=".$ligne[0]."&modif2=".$ligne[1]."
@@ -238,7 +238,7 @@ function affichage_Participe() {
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"3\">Participe</th></tr>
-         <tr><th>Nom personne</th><th>Nom activité</th><th>Date</th><th>Actions</th></tr>");
+         <tr><th>Nom personne</th><th>Nom activite</th><th>Date</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
     print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif1=".$ligne[0]."&modif2=".$ligne[1]."
@@ -285,7 +285,7 @@ function affichage_Accompagne() {
   WHERE a.id_pere = p.id_personne AND a.id_fils = pers.id_personne";
   $result = $connexion -> $req;
     print("<table>
-         <tr><th colspan=\"4\">Payée</th></tr>
+         <tr><th colspan=\"4\">Accompagne</th></tr>
          <tr><th>nom pere</th><th>nom fils</th><th>id_reservation</th><th>Actions</th></tr>");
  while($ligne = $result -> Fetch_array()) {
     print("<tr><td>".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."</td>
