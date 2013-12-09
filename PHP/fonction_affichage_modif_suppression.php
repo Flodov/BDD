@@ -135,8 +135,8 @@ function affichage_Personne() {
     die("pb connexion");
     return;
   }
-  $req = "SELECT p.id_personne, p.nom_personne, p.adresseEmail, a.nom_personne FROM Personne p, 
-  Personne a WHERE p.id_accompagnateur = a.id_personne";
+  $req = "SELECT p.id_personne, p.nom_personne, p.adresseEmail, a.nom_personne FROM PERSONNE p,
+  PERSONNE a, ACCOMPAGNE acc WHERE acc.id_pere = p.id_personne AND acc.id_fils = a.id_personne";
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"4\">Personne</th></tr>
