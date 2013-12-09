@@ -142,8 +142,8 @@ function affichage_Personne() {
          <tr><th colspan=\"4\">Personne</th></tr>
          <tr><th>Nom</th><th>Adresse Email</th><th>Nom accompagnateur</th><th>Actions</th></tr>");
   while($ligne = $result -> Fetch_array()) {
-    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."/<td><td>".$ligne[2]."/<td>
-    <td>".if($ligne[3]!= null ) { $ligne[3] }."/<td>
+    print("<tr><td style=\"display:none;\">".$ligne[0]."</td><td>".$ligne[1]."</td><td>".$ligne[2]."</td>
+    <td>".if($ligne[3]!= null ) { $ligne[3] }."</td>
     <td style=\"text-align : center;\"><a href=\"affichage.php?modif=".$ligne[0]."\">
     <img src=\"modif.PNG\" alt=\"modifier\" style=\"width : 20px; height : 20px;\"/></a>
     <a href=\"affichage.php?suppr=".$ligne[0]."\"><img src=\"suppr.PNG\" alt=\"faux\" 
