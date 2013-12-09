@@ -7,7 +7,7 @@ function affichage_Activite() {
     die("pb connexion");
     return;
   }
-  $req = "SELECT a.id_activite, a.nom_activite, l.nom_lieu FROM Activite a, Lieu l WHERE a.id_lieu = l.id_lieu";
+  $req = "SELECT a.id_activite, a.nom_activite, l.nom_lieu FROM ACTIVITE a, LIEU l WHERE a.id_lieu = l.id_lieu";
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"3\">Activité</th></tr>
@@ -28,7 +28,7 @@ function affichage_Lieu() {
     die("pb connexion");
     return;
   }
-  $req = "SELECT * FROM Lieu";
+  $req = "SELECT * FROM LIEU";
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"2\">Lieu</th></tr>
@@ -49,7 +49,7 @@ function affichage_Tel() {
     die("pb connexion");
     return;
   }
-  $req = "SELECT t.numTelephone p.nom_personne FROM Tel t, Personne p WHERE t.id_personne = p.id_personne";
+  $req = "SELECT t.numTelephone p.nom_personne FROM TEL t, PERSONNE p WHERE t.id_personne = p.id_personne";
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"3\">Telephone</th></tr>
@@ -70,8 +70,8 @@ function affichage_Emplacement() {
     die("pb connexion");
     return;
   }
-  $req = "SELECT e.id_emplacement, e.prix_emplacement, te.libelle_type_emplacement FROM Emplacement e,
-  Type_Emplacement te WHERE e.id_type_emplacement = te.id_type_emplacement";
+  $req = "SELECT e.id_emplacement, e.prix_emplacement, te.libelle_type_emplacement FROM EMPLACEMENT e,
+  TYPE_EMPLACEMENT te WHERE e.id_type_emplacement = te.id_type_emplacement";
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"4\">Emplacement</th></tr>
@@ -92,7 +92,7 @@ function affichage_Type_Emplacement() {
     die("pb connexion");
     return;
   }
-  $req = "SELECT * FROM Type_Emplacement";
+  $req = "SELECT * FROM TYPE_EMPLACEMENT";
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"2\">Type Emplacement</th></tr>
@@ -113,7 +113,7 @@ function affichage_Mode_Paiement() {
     die("pb connexion");
     return;
   }
-  $req = "SELECT * FROM Mode_Paiement";
+  $req = "SELECT * FROM MODE_PAIEMENT";
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"2\">Mode Paiement</th></tr>
@@ -183,7 +183,7 @@ function affichage_Facture() {
     die("pb connexion");
     return;
   }
-  $req = "SELECT * FROM Facture";
+  $req = "SELECT * FROM FACTURE";
   $result = $connexion -> $req;
   print("<table>
          <tr><th colspan=\"5\">Facture</th></tr>
@@ -208,7 +208,7 @@ function affichage_Anime() {
     return;
   }
   $req = "SELECT p.nom_personne, ac.nom_activite, a.id_date
-  FROM Anime a, activite ac, personne p
+  FROM ANIME a, ACTIVITE ac, PERSONNE p
   WHERE a.id_personne = p.id_personne AND a.id_activite = ac.id_activite";
   $result = $connexion -> $req;
   print("<table>
@@ -233,7 +233,7 @@ function affichage_Participe() {
     return;
   }
   $req = "SELECT p.nom_personne, ac.nom_activite, pa.id_date
-  FROM participe pa, activite ac, personne p
+  FROM PARTICIPE pa, ACTIVITE ac, PERSONNE p
   WHERE pa.id_personne = p.id_personne AND pa.id_activite = ac.id_activite";
   $result = $connexion -> $req;
   print("<table>
@@ -258,7 +258,7 @@ function affichage_Payee() {
     return;
   }
   $req = "SELECT p.id_facture, m.libelle_mode_paiement, p.montant
-  FROM mode_paiement m, payee p
+  FROM MODE_PAIEMENT m, PAYEE p
   WHERE p.id_mode_paiement = m.id_mode_paiement";
   $result = $connexion -> $req;
   print("<table>
