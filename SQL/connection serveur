@@ -1,14 +1,13 @@
 Connection phpmyadmin :
 
 lien : http://slave1.subdomain.com/phpMyAdmin/
-Utilisateurs : user2610583
-mdp: azerty789
+Utilisateurs : 
 
 
 
 Connection Filezilla :
 
-Server / Host	 : www1.subdomain.com
-Utilisateurs :	user2610583
-mdp : azerty789
-port : 21
+Server / Host	 : 
+Utilisateurs :	
+mdp :
+port : 
